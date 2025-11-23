@@ -4,9 +4,14 @@ import path from 'path';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import session from 'express-session';
+import { fileURLToPath } from 'url';
+
 
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
   async function start() {
 
