@@ -2,9 +2,9 @@ import express from 'express';
 import { MongoClient } from 'mongodb';
 import path from 'path';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import session from 'express-session';
 
-// import cors from 'cors';
 
 dotenv.config();
 
@@ -18,17 +18,10 @@ dotenv.config();
   const db = client.db('FullStackDB');
 
   const app = express();
+
+  
   app.use(express.json());
-
-  // app.use(cors());
-
-  //Session middleware
-    app.use(session({
-      secret: process.env.SESSION_SECRET,
-      resave: false,
-      saveUninitialized: true,
-      cookie: { secure: false}
-    }));
+  app.use(cors());
 
 
   app.use('/images', express.static(path.join(__dirname, '../assets')));
@@ -87,9 +80,11 @@ dotenv.config();
       res.json(populatedCart);
   });
 
-  app.listen(8000, () => {
-      console.log('Server is listening on port 8000')
+  const PORT = process.env.PORT || 8000;
+  app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
   });
+
 
   }
 
