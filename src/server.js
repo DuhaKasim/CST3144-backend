@@ -5,13 +5,13 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import session from 'express-session';
 import { fileURLToPath } from 'url';
-
+import { dirname, join, resolve } from 'path';
 
 
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
   async function start() {
 
@@ -31,10 +31,15 @@ const __dirname = path.dirname(__filename);
 
   app.use('/images', express.static(path.join(__dirname, '../assets')));
 
+  app.use(express.static(
+    path.resolve(__dirname, '../dist'),
+    {maxAge: '1y', etag: false },
+  ));
+
 
   app.get ('/api/products', async (req, res) => {
     const products = await db.collection('products').find({}).toArray();
-    res.send(products);
+    res.json(products);
 
   });
 
