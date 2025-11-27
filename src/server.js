@@ -62,6 +62,40 @@ const __dirname = dirname(__filename);
 
   });
 
+  app.put('/api/products/:productId/spaces', async (req, res) => {
+    const productId = req.params.productId;
+
+    try {
+        const product = await db.collection('products').findOne({ id: productId });
+        if (!product) {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+
+        // Ensure spaces exists
+        if (typeof product.spaces !== 'number') {
+            product.spaces = 10; // fallback if missing
+        }
+
+        // Reduce spaces by 1
+        const newSpaces = Math.max(0, product.spaces - 1);
+
+        // Update DB
+        await db.collection('products').updateOne(
+            { id: productId },
+            { $set: { spaces: newSpaces } }
+        );
+
+        // Return updated product
+        const updatedProduct = await db.collection('products').findOne({ id: productId });
+
+        res.json(updatedProduct);
+
+      } catch (err) {
+        res.status(500).json({ message: err.message });
+     }
+    });
+
+
   app.post('/api/users/:userId/cart', async (req, res) => {
       const userId = req.params.userId;
       const productId = req.body.id;
