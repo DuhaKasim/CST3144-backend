@@ -34,11 +34,6 @@ async function start() {
   // Serve images
   app.use('/images', express.static(path.join(__dirname, '../assets')));
 
-  // Serve Vue frontend build
-  app.use(express.static(
-    resolve(__dirname, '../dist'),
-    { maxAge: '1y', etag: false },
-  ));
 
   // --- API routes ---
   app.get('/api/products', async (req, res) => {
