@@ -10,8 +10,11 @@ The backend exposes a REST API that returns lessons, accepts orders, updates les
 🔗 https://cst3144-backend-3vp3.onrender.com/api/lessons
 
 📌 Required Coursework Links
+
 Component	Link
+
 Backend GitHub Repo	https://github.com/DuhaKasim/CST3144-backend
+
 Backend Live API on Render	https://cst3144-backend-3vp3.onrender.com/api/lessons
 
 MongoDB Atlas Export	(included in submission ZIP)
@@ -20,13 +23,13 @@ Postman Collection Export	(included in submission ZIP)
 📁 Project Structure
 backend/
 │── server.js
-│── db.js               (MongoDB Atlas connection using native driver)
+│── db.js               
 │── routes/
-│     ├── lessons.js    (GET lessons, PUT update)
-│     └── orders.js     (POST order)
-│── public/images/      (static middleware for lesson images)
+│     ├── lessons.js    
+│     └── orders.js     
+│── public/images/      
 │── middleware/
-│     └── logger.js     (custom request logger)
+│     └── logger.js    
 │── package.json
 │── .env  (NOT included in GitHub)
 
