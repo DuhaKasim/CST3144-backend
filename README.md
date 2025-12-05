@@ -1,3 +1,5 @@
+README FOR BACKEND REPOSITORY (MongoDB Atlas + Native Driver + Express)
+
 CST3144 Coursework – Backend (Express.js + MongoDB Atlas + Node.js)
 
 This repository contains the Express.js backend for the CST3144 Full Stack Web Application.
