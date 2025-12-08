@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "690e0be3080afba09463b112"
+  },
+  "id": "123",
+  "name": "Art",
+  "price": "£26.00",
+  "location": "Hendon",
+  "imageUrl": "/assets/artbook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b113"
+  },
+  "id": "234",
+  "name": "Biology",
+  "price": "£28.00",
+  "location": "Barnet",
+  "imageUrl": "/assets/biologybook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b114"
+  },
+  "id": "345",
+  "name": "Chemistry",
+  "price": "£18.00",
+  "location": "Oxford",
+  "imageUrl": "/assets/chemistrybook.jpg",
+  "spaces": 7
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b115"
+  },
+  "id": "785",
+  "name": "Dance",
+  "price": "£15.00",
+  "location": "Wesminister",
+  "imageUrl": "/assets/dancebook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b116"
+  },
+  "id": "110",
+  "name": "English",
+  "price": "£7.99",
+  "location": "Kensington",
+  "imageUrl": "/assets/englishbook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b117"
+  },
+  "id": "567",
+  "name": "Maths",
+  "price": "£21.00",
+  "location": "Brent Cross",
+  "imageUrl": "/assets/mathsbook.webp",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b118"
+  },
+  "id": "873",
+  "name": "Music",
+  "price": "£3.00",
+  "location": "Cambridge",
+  "imageUrl": "/assets/musicbook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b119"
+  },
+  "id": "890",
+  "name": "Physics",
+  "price": "£30.00",
+  "location": "Exeter",
+  "imageUrl": "/assets/physicsbook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b11a"
+  },
+  "id": "990",
+  "name": "Taekwondo",
+  "price": "£16.00",
+  "location": "Kent",
+  "imageUrl": "/assets/taekwondobook.jpg",
+  "spaces": 10
+},
+{
+  "_id": {
+    "$oid": "690e0be3080afba09463b11b"
+  },
+  "id": "157",
+  "name": "Cooking",
+  "price": "£24.00",
+  "location": "Uxbridge",
+  "imageUrl": "/assets/cookingbook.jpg",
+  "spaces": 10
+}]

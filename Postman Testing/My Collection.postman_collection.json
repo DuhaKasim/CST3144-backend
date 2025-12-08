@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "c3abed60-4808-461a-957c-f4f581f7330f",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48715466",
+		"_collection_link": "https://duhakasim-6905450.postman.co/workspace/Duha-Kasim's-Workspace~cf0ae49f-c53b-447a-8fca-de6fafd8c8e1/collection/48715466-c3abed60-4808-461a-957c-f4f581f7330f?action=share&source=collection_link&creator=48715466"
+	},
+	"item": [
+		{
+			"name": "Get All Lessons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/lessons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lessons"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": [
+				{
+					"name": "Get data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lessons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1504"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e0-05mv1BDGCsjKoTlxrJLnelHBsCM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:12:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"690e0be3080afba09463b112\",\n        \"id\": \"123\",\n        \"name\": \"Art\",\n        \"price\": \"£26.00\",\n        \"location\": \"Hendon\",\n        \"imageUrl\": \"/assets/artbook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b113\",\n        \"id\": \"234\",\n        \"name\": \"Biology\",\n        \"price\": \"£28.00\",\n        \"location\": \"Barnet\",\n        \"imageUrl\": \"/assets/biologybook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b114\",\n        \"id\": \"345\",\n        \"name\": \"Chemistry\",\n        \"price\": \"£18.00\",\n        \"location\": \"Oxford\",\n        \"imageUrl\": \"/assets/chemistrybook.jpg\",\n        \"spaces\": 8\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b115\",\n        \"id\": \"785\",\n        \"name\": \"Dance\",\n        \"price\": \"£15.00\",\n        \"location\": \"Wesminister\",\n        \"imageUrl\": \"/assets/dancebook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b116\",\n        \"id\": \"110\",\n        \"name\": \"English\",\n        \"price\": \"£7.99\",\n        \"location\": \"Kensington\",\n        \"imageUrl\": \"/assets/englishbook.jpg\",\n        \"spaces\": 11\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b117\",\n        \"id\": \"567\",\n        \"name\": \"Maths\",\n        \"price\": \"£21.00\",\n        \"location\": \"Brent Cross\",\n        \"imageUrl\": \"/assets/mathsbook.webp\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b118\",\n        \"id\": \"873\",\n        \"name\": \"Music\",\n        \"price\": \"£3.00\",\n        \"location\": \"Cambridge\",\n        \"imageUrl\": \"/assets/musicbook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b119\",\n        \"id\": \"890\",\n        \"name\": \"Physics\",\n        \"price\": \"£30.00\",\n        \"location\": \"Exeter\",\n        \"imageUrl\": \"/assets/physicsbook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b11a\",\n        \"id\": \"990\",\n        \"name\": \"Taekwondo\",\n        \"price\": \"£16.00\",\n        \"location\": \"Kent\",\n        \"imageUrl\": \"/assets/taekwondobook.jpg\",\n        \"spaces\": 10\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b11b\",\n        \"id\": \"157\",\n        \"name\": \"Cooking\",\n        \"price\": \"£24.00\",\n        \"location\": \"Uxbridge\",\n        \"imageUrl\": \"/assets/cookingbook.jpg\",\n        \"spaces\": 10\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Lesson by Lesson Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/lessons/110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lessons",
+						"110"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/lessons/110",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lessons",
+								"110"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"98-DZrIHdc6EqgiqS4yxg0xzJpTbc0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:14:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"690e0be3080afba09463b116\",\n    \"id\": \"110\",\n    \"name\": \"English\",\n    \"price\": \"£7.99\",\n    \"location\": \"Kensington\",\n    \"imageUrl\": \"/assets/englishbook.jpg\",\n    \"spaces\": 11\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders/12345/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"12345",
+						"cart"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/orders/12345/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"12345",
+								"cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-+GWPZSEnDT9KOuhvJgNUlhWGd3Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:18:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"690e0be3080afba09463b114\",\n        \"id\": \"345\",\n        \"name\": \"Chemistry\",\n        \"price\": \"£18.00\",\n        \"location\": \"Oxford\",\n        \"imageUrl\": \"/assets/chemistrybook.jpg\",\n        \"spaces\": 7\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Lesson to cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"110\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/orders/12345/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"12345",
+						"cart"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": [
+				{
+					"name": "Post data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"110\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/orders/12345/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"12345",
+								"cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "307"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"133-tQ+HIAunGwbf8oRY7VI4zTo8sxI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:20:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"690e0be3080afba09463b114\",\n        \"id\": \"345\",\n        \"name\": \"Chemistry\",\n        \"price\": \"£18.00\",\n        \"location\": \"Oxford\",\n        \"imageUrl\": \"/assets/chemistrybook.jpg\",\n        \"spaces\": 7\n    },\n    {\n        \"_id\": \"690e0be3080afba09463b116\",\n        \"id\": \"110\",\n        \"name\": \"English\",\n        \"price\": \"£7.99\",\n        \"location\": \"Kensington\",\n        \"imageUrl\": \"/assets/englishbook.jpg\",\n        \"spaces\": 10\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Put update lesson spaces",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/lessons/345/spaces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lessons",
+						"345",
+						"spaces"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/lessons/345/spaces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lessons",
+								"345",
+								"spaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-yJyFrvOiijslIsnn7Ng95aoUMBQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:21:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"spaces\": 6\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete items from cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/orders/12345/cart/110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"12345",
+						"cart",
+						"110"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/orders/12345/cart/110",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"12345",
+								"cart",
+								"110"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-jIuBESte9qRntgRj/AjUJ1IL4+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 14:22:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"690e0be3080afba09463b114\",\n        \"id\": \"345\",\n        \"name\": \"Chemistry\",\n        \"price\": \"£18.00\",\n        \"location\": \"Oxford\",\n        \"imageUrl\": \"/assets/chemistrybook.jpg\",\n        \"spaces\": 6\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Orders collection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Your Name\",\r\n  \"phone\": \"0123456789\",\r\n  \"email\": \"you@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/orders/12345/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"12345",
+						"checkout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Your Name\",\r\n  \"phone\": \"0123456789\",\r\n  \"email\": \"you@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/orders/12345/checkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"12345",
+								"checkout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-V5bVaihd+d3yjVvbBQBNdjHo1A4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Dec 2025 12:14:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Checkout complete! Order saved successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
